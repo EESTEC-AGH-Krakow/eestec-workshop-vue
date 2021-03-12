@@ -4,11 +4,9 @@
 			<Header />
 		</header>
 		<aside>{ASIDE COMPONENT}</aside>
-		<div class="container-fluid">
-			<main class="row no-gutters">
-				<router-view></router-view>
-			</main>
-		</div>
+		<main class="container-fluid">
+			<router-view></router-view>
+		</main>
 		<footer class="row no-gutters">{FOOTER COMPONENT}</footer>
 	</div>
 </template>
