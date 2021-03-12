@@ -62,8 +62,9 @@
     ]
   },
   "prettier": {
-    "vueIndentScriptAndStyle": true,
-    "tabWidth": 2,
-    "useTabs": true
-  }
+		"vueIndentScriptAndStyle": true,
+		"tabWidth": 2,
+		"useTabs": true,
+		"singleQuote": true
+	}
 }
