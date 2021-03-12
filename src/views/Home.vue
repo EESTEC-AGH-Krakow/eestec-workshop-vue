@@ -13,39 +13,66 @@
 				</slide>
 			</carousel>
 		</div>
-		<div class="col-12">
-			<div class="row">
-				<div class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto my-5">
-					<h2>They already trusted us</h2>
-				</div>
-				<template v-for="(media, index) in mediaObjects">
-					<div :key="index" class="w-100"></div>
-					<div :key="index" class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto my-4">
-						<div :class="{ 'flex-row-reverse': isOdd(index) }" class="media">
-							<img :class="isOdd(index) ? 'ml-3' : 'mr-3'" :src="media.image" alt="avatar" class="align-self-center" />
-							<div :class="{ 'text-right': isOdd(index) }" class="media-body">
-								<h4 class="mt-0 mb-3">{{ media.name }}</h4>
-								<p>
-									{{ media.description }}
-								</p>
-							</div>
+		<Section title="They already trusted us">
+			<div v-for="(media, index) in mediaObjects" :key="index" class="row">
+				<div class="w-100"></div>
+				<div class="col-12 my-4">
+					<div :class="{ 'flex-row-reverse': isOdd(index) }" class="media">
+						<img :class="isOdd(index) ? 'ml-3' : 'mr-3'" :src="media.image" alt="avatar" class="align-self-center" />
+						<div :class="{ 'text-right': isOdd(index) }" class="media-body">
+							<h4 class="mt-0 mb-3">{{ media.name }}</h4>
+							<p>
+								{{ media.description }}
+							</p>
 						</div>
 					</div>
-				</template>
+				</div>
 			</div>
-		</div>
+		</Section>
+		<Section title="Why is ProductX awesome?">
+			<div class="row">
+				<div class="col-12">
+					<article class="text-justify">
+						Eheu. Vita, abaculus, et uria. Assimilatios mori in mare! Historias mori in berolinum! Fatalis, raptus
+						eleatess diligenter locus de superbus, ferox turpis. Aonidess favere in aboa! Cur verpa credere? Lumens
+						cantare! Lamias manducare, tanquam brevis aonides. Historias observare in peritus cella! Accelerare nunquam
+						ducunt ad dexter idoleum. Mirabilis adelphiss ducunt ad lactea. A falsis, hilotae rusticus indictio. Byssus
+						de flavum nuptia, amor castor! Mortem de varius impositio, gratia vortex! Nunquam attrahendam urbs. Noster
+						poetas ducunt ad solitudo. Eheu. Vita, abaculus, et uria. Assimilatios mori in mare! Historias mori in
+						berolinum! Fatalis, raptus eleatess diligenter locus de superbus, ferox turpis. Aonidess favere in aboa! Cur
+						verpa credere? Lumens cantare! Lamias manducare, tanquam brevis aonides. Historias observare in peritus
+						cella! Accelerare nunquam ducunt ad dexter idoleum. Mirabilis adelphiss ducunt ad lactea. A falsis, hilotae
+						rusticus indictio. Byssus de flavum nuptia, amor castor! Mortem de varius impositio, gratia vortex! Nunquam
+						attrahendam urbs. Noster poetas ducunt ad solitudo. Eheu. Vita, abaculus, et uria. Assimilatios mori in
+						mare! Historias mori in berolinum! Fatalis, raptus eleatess diligenter locus de superbus, ferox turpis.
+						Aonidess favere in aboa! Cur verpa credere? Lumens cantare! Lamias manducare, tanquam brevis aonides.
+						Historias observare in peritus cella! Accelerare nunquam ducunt ad dexter idoleum. Mirabilis adelphiss
+						ducunt ad lactea. A falsis, hilotae rusticus indictio. Byssus de flavum nuptia, amor castor! Mortem de
+						varius impositio, gratia vortex! Nunquam attrahendam urbs. Noster poetas ducunt ad solitudo. Eheu. Vita,
+						abaculus, et uria. Assimilatios mori in mare! Historias mori in berolinum! Fatalis, raptus eleatess
+						diligenter locus de superbus, ferox turpis. Aonidess favere in aboa! Cur verpa credere? Lumens cantare!
+						Lamias manducare, tanquam brevis aonides. Historias observare in peritus cella! Accelerare nunquam ducunt ad
+						dexter idoleum. Mirabilis adelphiss ducunt ad lactea. A falsis, hilotae rusticus indictio. Byssus de flavum
+						nuptia, amor castor! Mortem de varius impositio, gratia vortex! Nunquam attrahendam urbs. Noster poetas
+						ducunt ad solitudo.
+					</article>
+				</div>
+			</div>
+		</Section>
 		<div class="col-12"></div>
 	</div>
 </template>
 
 <script>
+	import Section from '@/components/home/Section';
 	import { Carousel, Slide } from 'vue-carousel';
 
 	export default {
 		name: 'Home',
 		components: {
 			Carousel,
-			Slide
+			Slide,
+			Section
 		},
 		data() {
 			return {
